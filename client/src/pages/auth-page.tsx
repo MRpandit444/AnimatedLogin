@@ -64,11 +64,11 @@ export default function AuthPage() {
                 <TabsTrigger value="login">Login</TabsTrigger>
                 <TabsTrigger value="register">Register</TabsTrigger>
               </TabsList>
-              <AnimatePresence mode="wait">
-                <TabsContent value="login" className="mt-0">
+              <AnimatePresence mode="sync">
+                <TabsContent key="login-tab" value="login" className="mt-0">
                   <LoginForm />
                 </TabsContent>
-                <TabsContent value="register" className="mt-0">
+                <TabsContent key="register-tab" value="register" className="mt-0">
                   <RegisterForm />
                 </TabsContent>
               </AnimatePresence>
